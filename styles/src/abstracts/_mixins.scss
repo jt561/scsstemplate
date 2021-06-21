@@ -1,0 +1,138 @@
+@use "sass:map";
+
+// for centering items
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-x {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-center-y {
+    display: flex;
+    align-items: center;
+}
+
+@mixin abs-center {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin abs-center-x {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin abs-center-y {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// removing margin, padding, and setting box-sizing
+@mixin no-pad-marg-bord-box {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// full width and height
+@mixin full-w-h {
+    width: 100%;
+    height: 100%;
+}
+
+/******************************************************
+    media queries
+******************************************************/
+
+// for media queries with specified size -- used min-width -- design mobile first
+// size in px, ems, etc
+@mixin media-size($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+// $bp should be pre-defined breakpoints, so extraSmall, small, medium, large, extraLarge
+@mixin media-breakpoint($bp) {
+    @media (min-width: map.get($breakpoints, $bp)) {
+        @content;
+    }
+}
+
+/*** media query for small, medium and large screens ***/
+
+// this does seem redundant when desinging mobile first but its here just incase
+@mixin media-small-screen {
+    @media (min-width: map.get($breakpoints, small)) {
+        @content;
+    }
+}
+
+@mixin media-medium-screen {
+    @media (min-width: map.get($breakpoints, medium)) {
+        @content;
+    }
+}
+
+@mixin media-large-screen {
+    @media (min-width: map.get($breakpoints, large)) {
+        @content;
+    }
+}
+
+/// media query for hover
+@mixin media-hover {
+    @media (hover) {
+        @content;
+    }
+}
+
+/****************************************************
+    Convert SCSS vars to CSS custom properties(vars)
+*****************************************************/
+@mixin scss-map-to-custom-props($map) {
+    @each $key, $value in $map {
+        --#{$key}: #{$value};
+    }
+}
+
+// only y overflow
+@mixin y-overflow {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+// only x overflow
+@mixin x-overflow {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+/***********************************************************
+    Position
+***************************************************************/
+@mixin pos-abs-t-l {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@mixin pos-abs-t-r {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@mixin pos-abs-b-l {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@mixin pos-abs-b-r {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
