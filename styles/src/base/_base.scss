@@ -1,10 +1,10 @@
 :root {
-    @include scss-vars-to-css-vars($colors);
-    @include scss-vars-to-css-vars($font-families);
-    @include scss-vars-to-css-vars($extras);
+  @include scss-map-to-custom-props($colors);
+  @include scss-map-to-custom-props($font-families);
+  @include scss-map-to-custom-props($extras);
 }
 
 html,
 body {
-    @include full-w-h;
+  @include full-w-h;
 }
