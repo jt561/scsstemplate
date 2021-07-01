@@ -1,8 +1,8 @@
 @use "sass:map"; // sass function -- needed -- provides nested variables
 
-/******************************************
-    Breakpoints
-*******************************************/
+//////////////////////////////////////////////////
+// Breakpoints
+/////////////////////////////////////////////////
 
 // media breakpoints -- uses min-width(mobile first approach)
 // clarification
@@ -10,35 +10,35 @@
 // 1041 -> 1440 = large, || 1441 -> infinity = extraLarge
 // most of these are arbituary numbers I chose based on research and experience.
 $breakpoints: (
-  extraSmall: 10px,
-  small: 280px,
-  medium: 768px,
-  large: 1040px,
-  extraLarge: 1440px,
+    extraSmall: 10px,
+    small: 280px,
+    medium: 768px,
+    large: 1040px,
+    extraLarge: 1440px,
 );
 
-/*****************************************
-    Colors
-******************************************/
+//////////////////////////////////////////////////
+// Colors
+/////////////////////////////////////////////////
 $colors: (
-  clr-prim: red,
-  clr-sec: red,
-  clr-acc: red,
-  clr-txt-prim: red,
-  clr-txt-sec: red,
-  clr-txt-acc: red,
+    clr-prim: red,
+    clr-sec: red,
+    clr-acc: red,
+    clr-txt-prim: red,
+    clr-txt-sec: red,
+    clr-txt-acc: red,
 );
 
-/**********************************************
-    Font family
-***********************************************/
+//////////////////////////////////////////////////
+// Font family
+/////////////////////////////////////////////////
 $font-families: (
-  ff-prim: "'Arial',sans-serif",
-  ff-sec: "'Arial',sans-serif",
-  ff-tet: "'Arial',sans-serif",
+    ff-prim: "'Arial',sans-serif",
+    ff-sec: "'Arial',sans-serif",
+    ff-tet: "'Arial',sans-serif",
 );
 
-/**********************************************
-    Extras
-***********************************************/
+//////////////////////////////////////////////////
+// Extras
+/////////////////////////////////////////////////
 $extras: ();

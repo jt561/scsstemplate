@@ -23,14 +23,22 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin abs-center-x {
+@mixin abs-center-x-left {
     left: 50%;
     transform: translateX(-50%);
 }
+@mixin abs-center-x-right {
+    right: 50%;
+    transform: translateX(50%);
+}
 
-@mixin abs-center-y {
+@mixin abs-center-y-top {
     top: 50%;
     transform: translateY(-50%);
+}
+@mixin abs-center-y-bottom {
+    bottom: 50%;
+    transform: translateY(50%);
 }
 
 // removing margin, padding, and setting box-sizing
@@ -46,9 +54,9 @@
     height: 100%;
 }
 
-/******************************************************
-    media queries
-******************************************************/
+//////////////////////////////////////////////////
+// media queries
+/////////////////////////////////////////////////
 
 // for media queries with specified size -- used min-width -- design mobile first
 // size in px, ems, etc
@@ -65,7 +73,9 @@
     }
 }
 
-/*** media query for small, medium and large screens ***/
+//////////////////////////////////////////////////
+// media query for small, medium and large screens 
+/////////////////////////////////////////////////
 
 // this does seem redundant when desinging mobile first but its here just incase
 @mixin media-small-screen {
@@ -93,9 +103,9 @@
     }
 }
 
-/****************************************************
-    Convert SCSS vars to CSS custom properties(vars)
-*****************************************************/
+//////////////////////////////////////////////////
+// Convert SCSS vars to CSS custom properties(vars)
+/////////////////////////////////////////////////
 @mixin scss-map-to-custom-props($map) {
     @each $key, $value in $map {
         --#{$key}: #{$value};
@@ -113,9 +123,9 @@
     overflow-x: auto;
 }
 
-/***********************************************************
-    Position
-***************************************************************/
+//////////////////////////////////////////////////
+// Position
+/////////////////////////////////////////////////
 @mixin pos-abs-t-l {
     position: absolute;
     top: 0;
@@ -135,4 +145,29 @@
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+//////////////////////////////////////////////////
+// Text
+/////////////////////////////////////////////////
+@mixin one-line-truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+//////////////////////////////////////////////////
+// Children
+/////////////////////////////////////////////////
+@mixin for-all-children {
+    > * {
+        @content;
+    }
+}
+
+@mixin for-all-children-but-last {
+    > *:not(:last-child) {
+        @content;
+    }
 }

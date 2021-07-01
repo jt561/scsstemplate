@@ -1,20 +1,11 @@
-/************** Order is important here *********************/
-/******************************************
-    Maps
-*******************************************/
-/*****************************************
-    Colors
-******************************************/
-/**********************************************
-    Font family
-***********************************************/
-/******************************************************
-    media queries
-******************************************************/
-/*** media query for small, medium and large screens ***/
-/****************************************************
-    Convert SCSS vars to CSS custom properties(vars)
-*****************************************************/
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --clr-prim: red;
   --clr-sec: red;
@@ -22,19 +13,9 @@
   --clr-txt-prim: red;
   --clr-txt-sec: red;
   --clr-txt-acc: red;
-  --fon-fam-prim: Arial;
-  --fon-fam-sec: Arial;
-  --fon-fam-3: Arial;
-  --fon-fam-4: Arial;
-  --fon-fam-5: Arial;
-}
-
-*,
-::before,
-::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  --ff-prim: 'Arial',sans-serif;
+  --ff-sec: 'Arial',sans-serif;
+  --ff-tet: 'Arial',sans-serif;
 }
 
 html,
