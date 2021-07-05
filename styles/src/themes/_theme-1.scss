@@ -1,1 +1,4 @@
 // this should be second theme, your default theme should come from abstracts and base
+.theme-1 {
+    @include scss-map-to-custom-props($colors-light);
+}

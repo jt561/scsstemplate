@@ -20,22 +20,38 @@ $breakpoints: (
 //////////////////////////////////////////////////
 // Colors
 /////////////////////////////////////////////////
-$colors: (
-    clr-prim: red,
-    clr-sec: red,
-    clr-acc: red,
-    clr-txt-prim: red,
-    clr-txt-sec: red,
-    clr-txt-acc: red,
+$colors-dark: (
+    clr-primary: #1d1d1d,
+    clr-secondary: #202020,
+    clr-accent: #45382fe0,
+    clr-txt-primary: #fff,
+    clr-txt-secondary: #252525,
+    clr-txt-accent: #ecc46c,
+    clr-light-grey: #ffffff33,
+    clr-dark-grey: #2e2e2e,
+    clr-box-shad-primary: #16161670,
+    clr-green: #3cff00d3,
+    clr-red: #d42222e0,
+);
+
+$colors-light: (
+    clr-primary: #ffffff,
+    clr-secondary: #fff,
+    clr-txt-primary: #222222ee,
+    clr-txt-secondary: rgb(241, 241, 241),
+    clr-txt-accent: #da9500,
+    clr-light-grey: #c4c4c4,
+    clr-dark-grey: #81818133,
+    clr-box-shad-primary: #b4b4b434,
 );
 
 //////////////////////////////////////////////////
 // Font family
 /////////////////////////////////////////////////
 $font-families: (
-    ff-prim: "'Arial',sans-serif",
-    ff-sec: "'Arial',sans-serif",
-    ff-tet: "'Arial',sans-serif",
+    ff-primary: "'Arial',sans-serif",
+    ff-secondary: "'Arial',sans-serif",
+    ff-tetiary: "'Arial',sans-serif",
 );
 
 //////////////////////////////////////////////////

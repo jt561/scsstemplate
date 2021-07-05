@@ -1,5 +1,5 @@
 :root {
-  @include scss-map-to-custom-props($colors);
+  @include scss-map-to-custom-props($colors-dark);
   @include scss-map-to-custom-props($font-families);
   @include scss-map-to-custom-props($extras);
 }

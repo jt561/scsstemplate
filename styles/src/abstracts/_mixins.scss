@@ -74,7 +74,7 @@
 }
 
 //////////////////////////////////////////////////
-// media query for small, medium and large screens 
+// media query for small, medium and large screens
 /////////////////////////////////////////////////
 
 // this does seem redundant when desinging mobile first but its here just incase
@@ -162,6 +162,12 @@
 /////////////////////////////////////////////////
 @mixin for-all-children {
     > * {
+        @content;
+    }
+}
+
+@mixin for-all-descendants {
+    * {
         @content;
     }
 }
