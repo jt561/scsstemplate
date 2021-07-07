@@ -20,7 +20,7 @@ $breakpoints: (
 //////////////////////////////////////////////////
 // Colors
 /////////////////////////////////////////////////
-$colors-dark: (
+$colors-default-dark: (
     clr-primary: #1d1d1d,
     clr-secondary: #202020,
     clr-accent: #45382fe0,
@@ -35,7 +35,7 @@ $colors-dark: (
     clr-white: #fff,
 );
 
-$colors-light: (
+$colors-cascade-light: (
     clr-primary: #ffffff,
     clr-secondary: #fff,
     clr-txt-primary: #222222ee,
