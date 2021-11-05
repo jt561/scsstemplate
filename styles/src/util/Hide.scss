@@ -1,0 +1,30 @@
+/**********************************
+ Hiding items based on view-width
+ **********************************/
+.hide-on-sm {
+    display: none !important;
+}
+
+@include media-medium-screen {
+    .hide-on-sm {
+        display: initial !important;
+    }
+
+    .hide-on-md {
+        display: none !important;
+    }
+}
+
+@include media-large-screen {
+    .hide-on-sm {
+        display: initial !important;
+    }
+
+    .hide-on-md {
+        display: initial !important;
+    }
+
+    .hide-on-lg {
+        display: none !important;
+    }
+}
