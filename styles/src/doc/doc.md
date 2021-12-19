@@ -1,4 +1,4 @@
-/*******************************************************************************
+/**************************************\*\*\***************************************
 
     MySCSS - A SCSS base folder structure for begginer projects.
     Copyright (C) 2021-present Joshua Tetteh
@@ -16,8 +16,10 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see {http://www.gnu.org/licenses/}.
 
-    Home: https://github.com/{insert Github here}
-*/
+    Home: https://github.com/{github.com/jt561/scsstemplate}
+
+\*/
 
                             Add personal docs below
-/********************************************************************************/
+
+/**************************************\*\*\*\***************************************/
